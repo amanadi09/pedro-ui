@@ -47,6 +47,12 @@ export default tseslint.config(
         { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
       ],
       'react/prop-types': 'off',
+      // Flags plain apostrophes/quotes in JSX text ("don't", "here's") as
+      // though they need &apos;/&quot; escaping. Technically-correct but
+      // makes prose-heavy JSX (this repo's docs site) much harder to read
+      // and write for negligible real-world benefit — off by convention in
+      // a lot of production codebases for exactly this reason.
+      'react/no-unescaped-entities': 'off',
       'react-hooks/exhaustive-deps': 'warn',
     },
   },
