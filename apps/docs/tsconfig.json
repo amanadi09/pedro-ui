@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": ["vite/client"],
+    "noUnusedLocals": false
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../../packages/hooks" },
+    { "path": "../../packages/theme" },
+    { "path": "../../packages/ui" },
+    { "path": "../../packages/utils" }
+  ]
+}

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import tailwindcssAnimate from 'tailwindcss-animate';
 import { fontFamily, typeScale } from './tokens/typography';
 import { space } from './tokens/spacing';
 import { radius } from './tokens/radius';
@@ -63,18 +64,52 @@ const novaPreset: Partial<Config> = {
         'focus-ring': withOpacity('--color-focus-ring'),
       },
       fontFamily: {
-        sans: fontFamily.sans,
-        mono: fontFamily.mono,
+        sans: [...fontFamily.sans],
+        mono: [...fontFamily.mono],
       },
       fontSize: {
-        display: [typeScale.display.fontSize, { lineHeight: typeScale.display.lineHeight, letterSpacing: typeScale.display.letterSpacing, fontWeight: typeScale.display.fontWeight.toString() }],
-        heading: [typeScale.heading.fontSize, { lineHeight: typeScale.heading.lineHeight, letterSpacing: typeScale.heading.letterSpacing, fontWeight: typeScale.heading.fontWeight.toString() }],
-        subheading: [typeScale.subheading.fontSize, { lineHeight: typeScale.subheading.lineHeight, letterSpacing: typeScale.subheading.letterSpacing, fontWeight: typeScale.subheading.fontWeight.toString() }],
-        title: [typeScale.title.fontSize, { lineHeight: typeScale.title.lineHeight, fontWeight: typeScale.title.fontWeight.toString() }],
+        display: [
+          typeScale.display.fontSize,
+          {
+            lineHeight: typeScale.display.lineHeight,
+            letterSpacing: typeScale.display.letterSpacing,
+            fontWeight: typeScale.display.fontWeight.toString(),
+          },
+        ],
+        heading: [
+          typeScale.heading.fontSize,
+          {
+            lineHeight: typeScale.heading.lineHeight,
+            letterSpacing: typeScale.heading.letterSpacing,
+            fontWeight: typeScale.heading.fontWeight.toString(),
+          },
+        ],
+        subheading: [
+          typeScale.subheading.fontSize,
+          {
+            lineHeight: typeScale.subheading.lineHeight,
+            letterSpacing: typeScale.subheading.letterSpacing,
+            fontWeight: typeScale.subheading.fontWeight.toString(),
+          },
+        ],
+        title: [
+          typeScale.title.fontSize,
+          {
+            lineHeight: typeScale.title.lineHeight,
+            fontWeight: typeScale.title.fontWeight.toString(),
+          },
+        ],
         body: [typeScale.body.fontSize, { lineHeight: typeScale.body.lineHeight }],
         small: [typeScale.small.fontSize, { lineHeight: typeScale.small.lineHeight }],
         caption: [typeScale.caption.fontSize, { lineHeight: typeScale.caption.lineHeight }],
-        label: [typeScale.label.fontSize, { lineHeight: typeScale.label.lineHeight, letterSpacing: typeScale.label.letterSpacing, fontWeight: typeScale.label.fontWeight.toString() }],
+        label: [
+          typeScale.label.fontSize,
+          {
+            lineHeight: typeScale.label.lineHeight,
+            letterSpacing: typeScale.label.letterSpacing,
+            fontWeight: typeScale.label.fontWeight.toString(),
+          },
+        ],
         code: [typeScale.code.fontSize, { lineHeight: typeScale.code.lineHeight }],
       },
       spacing: Object.fromEntries(Object.entries(space).map(([k, v]) => [k, v])),
@@ -98,8 +133,14 @@ const novaPreset: Partial<Config> = {
       keyframes: {
         'nova-fade-in': { from: { opacity: '0' }, to: { opacity: '1' } },
         'nova-fade-out': { from: { opacity: '1' }, to: { opacity: '0' } },
-        'nova-scale-in': { from: { opacity: '0', transform: 'scale(0.96)' }, to: { opacity: '1', transform: 'scale(1)' } },
-        'nova-slide-up': { from: { opacity: '0', transform: 'translateY(4px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+        'nova-scale-in': {
+          from: { opacity: '0', transform: 'scale(0.96)' },
+          to: { opacity: '1', transform: 'scale(1)' },
+        },
+        'nova-slide-up': {
+          from: { opacity: '0', transform: 'translateY(4px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         'nova-fade-in': 'nova-fade-in 150ms ease-out',
@@ -109,7 +150,7 @@ const novaPreset: Partial<Config> = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [tailwindcssAnimate],
 };
 
 export default novaPreset;

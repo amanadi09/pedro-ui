@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '../../../packages/theme/src/css/variables.css';
+
+@layer base {
+  html {
+    font-family: theme('fontFamily.sans');
+  }
+
+  body {
+    margin: 0;
+  }
+
+  /* Visible keyboard focus everywhere, mouse users don't see it thanks to
+     :focus-visible — this is the a11y "focus indicators" requirement
+     implemented once, globally, rather than per-component. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--color-focus-ring));
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: rgb(var(--color-primary-200));
+    color: rgb(var(--color-primary-900));
+  }
+}
