@@ -11,15 +11,15 @@ const catalog: Category[] = [
     name: 'Inputs',
     items: [
       { name: 'Button', to: '/components/button' },
-      { name: 'Icon Button' },
+      { name: 'Icon Button', to: '/components/icon-button' },
       { name: 'Input', to: '/components/input' },
       { name: 'Textarea' },
       { name: 'Password Input' },
       { name: 'Search Input' },
       { name: 'OTP Input' },
-      { name: 'Checkbox' },
+      { name: 'Checkbox', to: '/components/checkbox' },
       { name: 'Radio' },
-      { name: 'Switch' },
+      { name: 'Switch', to: '/components/switch' },
       { name: 'Slider' },
       { name: 'File Upload' },
       { name: 'Date Picker' },
@@ -47,11 +47,11 @@ const catalog: Category[] = [
   {
     name: 'Data Display',
     items: [
-      { name: 'Card' },
+      { name: 'Card', to: '/components/card' },
       { name: 'Statistic Card' },
       { name: 'Metric Card' },
       { name: 'KPI Card' },
-      { name: 'Avatar' },
+      { name: 'Avatar', to: '/components/avatar' },
       { name: 'Badge' },
       { name: 'Chip' },
       { name: 'Table' },
@@ -71,7 +71,7 @@ const catalog: Category[] = [
       { name: 'Alert', to: '/components/alert' },
       { name: 'Toast' },
       { name: 'Snackbar' },
-      { name: 'Tooltip' },
+      { name: 'Tooltip', to: '/components/tooltip' },
       { name: 'Popover' },
       { name: 'Dialog' },
       { name: 'Modal' },
@@ -112,20 +112,9 @@ const catalog: Category[] = [
 // page yet — still shown as "Available", just without a `to` link into a
 // page that doesn't exist. Keeps this index honest about what you can
 // actually `import { X } from '@nova-ui/react'` today.
-const availableWithoutPage = new Set([
-  'Icon Button',
-  'Checkbox',
-  'Switch',
-  'Avatar',
-  'Card',
-  'Tooltip',
-]);
-
 export function ComponentsIndex() {
   const totalPlanned = catalog.reduce((sum, c) => sum + c.items.length, 0);
-  const totalBuilt =
-    catalog.reduce((sum, c) => sum + c.items.filter((i) => i.to).length, 0) +
-    availableWithoutPage.size;
+  const totalBuilt = catalog.reduce((sum, c) => sum + c.items.filter((i) => i.to).length, 0);
 
   return (
     <div>
@@ -139,7 +128,6 @@ export function ComponentsIndex() {
           <h2 className="mb-3 text-title text-text-primary">{category.name}</h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
             {category.items.map((item) => {
-              const isAvailable = !!item.to || availableWithoutPage.has(item.name);
               const content = (
                 <Card
                   variant="outlined"
@@ -152,10 +140,6 @@ export function ComponentsIndex() {
                     <span className="flex items-center gap-1 text-caption text-primary-600 dark:text-primary-400">
                       View docs <ArrowRight className="size-3" />
                     </span>
-                  ) : isAvailable ? (
-                    <Badge size="sm" variant="subtle" colorScheme="success">
-                      Available
-                    </Badge>
                   ) : (
                     <Badge size="sm" variant="subtle" colorScheme="neutral">
                       Coming soon

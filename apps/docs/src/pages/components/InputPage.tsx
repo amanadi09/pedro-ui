@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
 import { Input } from '@nova-ui/react';
 import { PageHeader, Section } from '../../components/PageHeader';
@@ -131,6 +132,23 @@ export function InputPage() {
             renders at a time, by design, so the message doesn't get cut off in narrow layouts.
           </li>
         </ul>
+      </Section>
+
+      <Section title="Related components">
+        <div className="flex items-center gap-3">
+          <Link
+            to="/components/checkbox"
+            className="text-small text-primary-600 hover:underline dark:text-primary-400"
+          >
+            Checkbox
+          </Link>
+          <Link
+            to="/components/switch"
+            className="text-small text-primary-600 hover:underline dark:text-primary-400"
+          >
+            Switch
+          </Link>
+        </div>
       </Section>
     </div>
   );

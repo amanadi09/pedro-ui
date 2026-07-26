@@ -20,8 +20,14 @@ export const navSections: NavSection[] = [
     items: [
       { label: 'All components', to: '/components' },
       { label: 'Button', to: '/components/button' },
+      { label: 'IconButton', to: '/components/icon-button' },
       { label: 'Input', to: '/components/input' },
+      { label: 'Checkbox', to: '/components/checkbox' },
+      { label: 'Switch', to: '/components/switch' },
+      { label: 'Card', to: '/components/card' },
+      { label: 'Avatar', to: '/components/avatar' },
       { label: 'Alert', to: '/components/alert' },
+      { label: 'Tooltip', to: '/components/tooltip' },
     ],
   },
   {

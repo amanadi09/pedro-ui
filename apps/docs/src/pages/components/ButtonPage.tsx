@@ -225,7 +225,7 @@ export function ButtonPage() {
       <Section title="Related components">
         <div className="flex gap-2">
           <Link
-            to="/components"
+            to="/components/icon-button"
             className="text-small text-primary-600 hover:underline dark:text-primary-400"
           >
             IconButton

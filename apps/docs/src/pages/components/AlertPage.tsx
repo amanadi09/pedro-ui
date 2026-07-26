@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Alert } from '@nova-ui/react';
 import { PageHeader, Section } from '../../components/PageHeader';
 import { CodeBlock } from '../../components/CodeBlock';
@@ -119,6 +120,23 @@ export function AlertPage() {
             dismisses it.
           </li>
         </ul>
+      </Section>
+
+      <Section title="Related components">
+        <div className="flex items-center gap-3">
+          <Link
+            to="/components/tooltip"
+            className="text-small text-primary-600 hover:underline dark:text-primary-400"
+          >
+            Tooltip
+          </Link>
+          <Link
+            to="/components/card"
+            className="text-small text-primary-600 hover:underline dark:text-primary-400"
+          >
+            Card
+          </Link>
+        </div>
       </Section>
     </div>
   );
