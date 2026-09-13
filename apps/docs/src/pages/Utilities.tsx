@@ -57,14 +57,14 @@ export function UtilitiesPage() {
         title="Utilities"
         description={
           <>
-            <code className="text-code">@nova-ui/utils</code> — small, dependency-light functions
+            <code className="text-code">@pedro-ui/utils</code> — small, dependency-light functions
             (only <code className="text-code">clsx</code> and{' '}
             <code className="text-code">tailwind-merge</code> as real dependencies).
           </>
         }
       />
 
-      <CodeBlock language="bash" code="npm install @nova-ui/utils" />
+      <CodeBlock language="bash" code="npm install @pedro-ui/utils" />
 
       <div className="mt-8 flex flex-col divide-y divide-border rounded-lg border border-border bg-surface">
         {utils.map((util) => (

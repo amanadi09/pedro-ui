@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Trash2, Bell } from 'lucide-react';
-import { IconButton } from '@nova-ui/react';
+import { IconButton } from '@pedro-ui/react';
 import { PageHeader, Section } from '../../components/PageHeader';
 import { CodeBlock } from '../../components/CodeBlock';
 import { PropsTable, type PropRow } from '../../components/PropsTable';
@@ -22,7 +22,7 @@ const props: PropRow[] = [
   },
   {
     name: 'colorScheme',
-    type: 'NovaColorScheme',
+    type: 'PedroColorScheme',
     default: "'primary'",
     description: 'Same 7-value union as every other component.',
   },

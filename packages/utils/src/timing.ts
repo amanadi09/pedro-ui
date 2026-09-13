@@ -16,7 +16,7 @@ export function sleep(ms: number): Promise<void> {
  * on each new invocation. Exposes `.cancel()` to clear a pending call
  * imperatively (e.g. on unmount).
  *
- * Prefer the `useDebounce` hook in `@nova-ui/hooks` inside React components
+ * Prefer the `useDebounce` hook in `@pedro-ui/hooks` inside React components
  * — this function is the primitive it's built on, for non-React contexts.
  *
  * @example

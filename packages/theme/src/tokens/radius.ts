@@ -1,5 +1,5 @@
 /**
- * Border radius tokens. Kept modest across the board (Nova UI's brief calls
+ * Border radius tokens. Kept modest across the board (Pedro UI's brief calls
  * for a Linear/Stripe-like precision rather than the fully-rounded "soft"
  * aesthetic) — the largest non-"full" step is 16px, reserved for large
  * surfaces like modals and cards, not buttons or inputs.

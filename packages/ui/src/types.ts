@@ -4,14 +4,14 @@
  * side by side can pass the same `size` value everywhere and get visually
  * matched heights — see `apps/docs` "Kitchen sink" example.
  */
-export type NovaSize = 'sm' | 'md' | 'lg';
+export type PedroSize = 'sm' | 'md' | 'lg';
 
 /**
  * Shared semantic color scheme, mirrored 1:1 from the token ramps in
- * `@nova-ui/theme` (`primary`, `secondary`, `success`, `danger`, `warning`,
+ * `@pedro-ui/theme` (`primary`, `secondary`, `success`, `danger`, `warning`,
  * `info`, `neutral`). Named `colorScheme` (not `color` or `variant`) to
- * match Chakra UI's terminology, per Nova UI's stated API-compatibility
+ * match Chakra UI's terminology, per Pedro UI's stated API-compatibility
  * goal.
  */
-export type NovaColorScheme =
+export type PedroColorScheme =
   'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'neutral';

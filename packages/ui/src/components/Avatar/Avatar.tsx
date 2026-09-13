@@ -1,6 +1,6 @@
 import { forwardRef, useState, type HTMLAttributes } from 'react';
-import { cn } from '@nova-ui/utils';
-import type { NovaColorScheme } from '../../types';
+import { cn } from '@pedro-ui/utils';
+import type { PedroColorScheme } from '../../types';
 
 export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type AvatarStatus = 'online' | 'offline' | 'away' | 'busy';
@@ -11,7 +11,7 @@ export interface AvatarProps extends HTMLAttributes<HTMLSpanElement> {
   name?: string;
   size?: AvatarSize;
   /** Background for the fallback-initials state. Default `'neutral'`. Ignored once an image loads. */
-  colorScheme?: NovaColorScheme;
+  colorScheme?: PedroColorScheme;
   status?: AvatarStatus;
 }
 
@@ -38,7 +38,7 @@ const statusColor: Record<AvatarStatus, string> = {
   busy: 'bg-danger-500',
 };
 
-const fallbackBg: Record<NovaColorScheme, string> = {
+const fallbackBg: Record<PedroColorScheme, string> = {
   primary: 'bg-primary-100 text-primary-700 dark:bg-primary-900/50 dark:text-primary-300',
   secondary: 'bg-secondary-100 text-secondary-700 dark:bg-secondary-900/50 dark:text-secondary-300',
   success: 'bg-success-100 text-success-700 dark:bg-success-900/50 dark:text-success-300',

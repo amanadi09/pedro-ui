@@ -1,13 +1,13 @@
 import { forwardRef, type HTMLAttributes } from 'react';
-import { cn } from '@nova-ui/utils';
-import type { NovaColorScheme, NovaSize } from '../../types';
+import { cn } from '@pedro-ui/utils';
+import type { PedroColorScheme, PedroSize } from '../../types';
 
 export type BadgeVariant = 'solid' | 'subtle' | 'outline';
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   variant?: BadgeVariant;
-  colorScheme?: NovaColorScheme;
-  size?: Extract<NovaSize, 'sm' | 'md'>;
+  colorScheme?: PedroColorScheme;
+  size?: Extract<PedroSize, 'sm' | 'md'>;
   /** Renders a small leading dot instead of/alongside text — common for status ("Online", "Degraded"). */
   withDot?: boolean;
 }
@@ -17,7 +17,7 @@ const sizeStyles: Record<'sm' | 'md', string> = {
   md: 'h-6 px-2.5 text-small gap-1.5',
 };
 
-const solid: Record<NovaColorScheme, string> = {
+const solid: Record<PedroColorScheme, string> = {
   primary: 'bg-primary-600 text-white dark:bg-primary-500 dark:text-neutral-950',
   secondary: 'bg-secondary-600 text-white dark:bg-secondary-500 dark:text-neutral-950',
   success: 'bg-success-600 text-white dark:bg-success-500 dark:text-neutral-950',
@@ -27,7 +27,7 @@ const solid: Record<NovaColorScheme, string> = {
   neutral: 'bg-neutral-700 text-white dark:bg-neutral-300 dark:text-neutral-900',
 };
 
-const subtle: Record<NovaColorScheme, string> = {
+const subtle: Record<PedroColorScheme, string> = {
   primary: 'bg-primary-100 text-primary-800 dark:bg-primary-900/40 dark:text-primary-300',
   secondary: 'bg-secondary-100 text-secondary-800 dark:bg-secondary-900/40 dark:text-secondary-300',
   success: 'bg-success-100 text-success-800 dark:bg-success-900/40 dark:text-success-300',
@@ -37,7 +37,7 @@ const subtle: Record<NovaColorScheme, string> = {
   neutral: 'bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300',
 };
 
-const outline: Record<NovaColorScheme, string> = {
+const outline: Record<PedroColorScheme, string> = {
   primary:
     'border border-primary-300 text-primary-700 dark:border-primary-700 dark:text-primary-300',
   secondary:
@@ -51,7 +51,7 @@ const outline: Record<NovaColorScheme, string> = {
   neutral: 'border border-border-strong text-text-secondary',
 };
 
-const dotColor: Record<NovaColorScheme, string> = {
+const dotColor: Record<PedroColorScheme, string> = {
   primary: 'bg-primary-500',
   secondary: 'bg-secondary-500',
   success: 'bg-success-500',
@@ -61,7 +61,7 @@ const dotColor: Record<NovaColorScheme, string> = {
   neutral: 'bg-neutral-500',
 };
 
-const variantStyles: Record<BadgeVariant, Record<NovaColorScheme, string>> = {
+const variantStyles: Record<BadgeVariant, Record<PedroColorScheme, string>> = {
   solid,
   subtle,
   outline,

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { throttle } from '@nova-ui/utils';
+import { throttle } from '@pedro-ui/utils';
 
 export type WindowSize = { width: number; height: number };
 

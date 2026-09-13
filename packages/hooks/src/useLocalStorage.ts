@@ -10,6 +10,6 @@ import { createStorageHook } from './internal-useStorage';
  *   plus a `removeValue` to clear the key and reset to `initialValue`.
  *
  * @example
- * const [theme, setTheme, resetTheme] = useLocalStorage('nova-theme', 'system');
+ * const [theme, setTheme, resetTheme] = useLocalStorage('pedro-theme', 'system');
  */
 export const useLocalStorage = createStorageHook(() => window.localStorage);

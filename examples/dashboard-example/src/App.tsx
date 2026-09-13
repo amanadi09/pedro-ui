@@ -10,9 +10,9 @@ import {
   Plus,
   MoreHorizontal,
 } from 'lucide-react';
-import { Card, Badge, Avatar, Button, IconButton, Input, Alert, useTheme } from '@nova-ui/react';
-import { formatCurrency, formatNumber } from '@nova-ui/utils';
-import { useDebounce } from '@nova-ui/hooks';
+import { Card, Badge, Avatar, Button, IconButton, Input, Alert, useTheme } from '@pedro-ui/react';
+import { formatCurrency, formatNumber } from '@pedro-ui/utils';
+import { useDebounce } from '@pedro-ui/hooks';
 
 type Metric = {
   label: string;
@@ -64,7 +64,7 @@ export default function App() {
           <div>
             <h1 className="text-heading text-text-primary">Overview</h1>
             <p className="text-small text-text-secondary">
-              Nova UI dashboard example — every element on this page is a Nova UI component.
+              Pedro UI dashboard example — every element on this page is a Pedro UI component.
             </p>
           </div>
           <div className="flex items-center gap-2">

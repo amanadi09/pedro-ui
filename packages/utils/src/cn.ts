@@ -8,7 +8,7 @@ import { twMerge } from 'tailwind-merge';
  * instead of emitting both classes and leaving the outcome to CSS source
  * order.
  *
- * Every Nova UI component composes its className through this function, so
+ * Every Pedro UI component composes its className through this function, so
  * consumers can always safely override a component's default styling by
  * passing `className`.
  *

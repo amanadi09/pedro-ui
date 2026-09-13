@@ -1,7 +1,7 @@
 {
-  "name": "@nova-ui/utils",
+  "name": "@pedro-ui/utils",
   "version": "0.1.0",
-  "description": "Framework-agnostic utility functions used across Nova UI.",
+  "description": "Framework-agnostic utility functions used across Pedro UI.",
   "license": "MIT",
   "type": "module",
   "main": "./src/index.ts",

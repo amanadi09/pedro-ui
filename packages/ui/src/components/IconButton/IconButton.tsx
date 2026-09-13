@@ -1,6 +1,6 @@
 import { forwardRef, type ButtonHTMLAttributes, type ReactElement } from 'react';
-import { cn } from '@nova-ui/utils';
-import type { NovaColorScheme, NovaSize } from '../../types';
+import { cn } from '@pedro-ui/utils';
+import type { PedroColorScheme, PedroSize } from '../../types';
 import { buttonVariantStyles, type ButtonVariant } from '../Button/Button';
 
 export interface IconButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> {
@@ -8,14 +8,14 @@ export interface IconButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonEle
   'aria-label': string;
   icon: ReactElement;
   variant?: ButtonVariant;
-  colorScheme?: NovaColorScheme;
-  size?: NovaSize;
+  colorScheme?: PedroColorScheme;
+  size?: PedroSize;
   isLoading?: boolean;
   /** Renders as a circle instead of a rounded square. Default `false`. */
   isRound?: boolean;
 }
 
-const squareSizeStyles: Record<NovaSize, string> = {
+const squareSizeStyles: Record<PedroSize, string> = {
   sm: 'size-8 rounded-md [&_svg]:size-4',
   md: 'size-10 rounded-lg [&_svg]:size-4',
   lg: 'size-12 rounded-lg [&_svg]:size-5',

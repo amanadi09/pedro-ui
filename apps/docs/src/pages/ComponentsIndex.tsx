@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Badge, Card } from '@nova-ui/react';
+import { Badge, Card } from '@pedro-ui/react';
 import { PageHeader } from '../components/PageHeader';
 
 type ComponentEntry = { name: string; to?: string };
@@ -111,7 +111,7 @@ const catalog: Category[] = [
 // Components that exist in packages/ui but don't have a dedicated deep-dive
 // page yet — still shown as "Available", just without a `to` link into a
 // page that doesn't exist. Keeps this index honest about what you can
-// actually `import { X } from '@nova-ui/react'` today.
+// actually `import { X } from '@pedro-ui/react'` today.
 export function ComponentsIndex() {
   const totalPlanned = catalog.reduce((sum, c) => sum + c.items.length, 0);
   const totalBuilt = catalog.reduce((sum, c) => sum + c.items.filter((i) => i.to).length, 0);

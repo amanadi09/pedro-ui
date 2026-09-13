@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Nova UI is pre-1.0 (`0.x`). Only the latest published version of each package receives security
+Pedro UI is pre-1.0 (`0.x`). Only the latest published version of each package receives security
 fixes — there is no long-term-support branch yet.
 
 ## Reporting a vulnerability
@@ -22,8 +22,8 @@ prioritized and a GitHub Security Advisory published once a patched version is a
 
 ## Scope
 
-The published runtime packages (`@nova-ui/react`, `@nova-ui/hooks`, `@nova-ui/utils`,
-`@nova-ui/theme`) are in scope. Vulnerabilities in this repository's own devDependencies
+The published runtime packages (`@pedro-ui/react`, `@pedro-ui/hooks`, `@pedro-ui/utils`,
+`@pedro-ui/theme`) are in scope. Vulnerabilities in this repository's own devDependencies
 (build/test/documentation tooling — Vite, Vitest, Storybook, ESLint, etc.) that do not affect the
 published package output are tracked via Dependabot rather than as security advisories, since they
-never reach a consumer's `node_modules` through installing a Nova UI package.
+never reach a consumer's `node_modules` through installing a Pedro UI package.

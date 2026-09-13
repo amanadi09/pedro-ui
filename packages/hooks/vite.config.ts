@@ -9,7 +9,7 @@ export default defineConfig({
       fileName: (format) => `index.${format === 'es' ? 'mjs' : 'cjs'}`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom', '@nova-ui/utils'],
+      external: ['react', 'react-dom', '@pedro-ui/utils'],
     },
     sourcemap: true,
     emptyOutDir: true,

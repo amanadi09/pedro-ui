@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from 'react';
-import { copyToClipboard } from '@nova-ui/utils';
+import { copyToClipboard } from '@pedro-ui/utils';
 
 export type UseClipboardResult = {
   /** Whether the most recent copy succeeded and hasn't yet timed out. */

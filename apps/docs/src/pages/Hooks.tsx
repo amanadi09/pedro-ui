@@ -81,13 +81,13 @@ export function HooksPage() {
         title="Hooks"
         description={
           <>
-            <code className="text-code">@nova-ui/hooks</code> — all 14 hooks, framework-agnostic
+            <code className="text-code">@pedro-ui/hooks</code> — all 14 hooks, framework-agnostic
             React (18/19), independently installable.
           </>
         }
       />
 
-      <CodeBlock language="bash" code="npm install @nova-ui/hooks" />
+      <CodeBlock language="bash" code="npm install @pedro-ui/hooks" />
 
       <div className="mt-8 flex flex-col divide-y divide-border rounded-lg border border-border bg-surface">
         {hooks.map((hook) => (

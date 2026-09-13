@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { X } from 'lucide-react';
-import { IconButton } from '@nova-ui/react';
+import { IconButton } from '@pedro-ui/react';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 

@@ -5,7 +5,7 @@
  * contexts. Resolves `true`/`false` rather than throwing, so callers can
  * drive UI state (e.g. a "Copied!" toast) without a try/catch.
  *
- * Prefer the `useClipboard` hook in `@nova-ui/hooks` inside components —
+ * Prefer the `useClipboard` hook in `@pedro-ui/hooks` inside components —
  * it wraps this with "copied" state and auto-reset already handled.
  *
  * @example

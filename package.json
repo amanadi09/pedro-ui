@@ -1,8 +1,8 @@
 {
-  "name": "nova-ui-monorepo",
+  "name": "pedro-ui-monorepo",
   "private": true,
   "version": "0.1.0",
-  "description": "Nova UI — a production-grade React design system and component library.",
+  "description": "Pedro UI — a production-grade React design system and component library.",
   "license": "MIT",
   "packageManager": "npm@10.9.0",
   "type": "module",

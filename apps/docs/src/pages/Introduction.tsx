@@ -1,5 +1,5 @@
 import { ArrowRight, Accessibility as AccessibilityIcon, Palette, Package } from 'lucide-react';
-import { Card, Badge } from '@nova-ui/react';
+import { Card, Badge } from '@pedro-ui/react';
 import { Section } from '../components/PageHeader';
 import { CodeBlock } from '../components/CodeBlock';
 import { LinkButton } from '../components/LinkButton';
@@ -11,7 +11,7 @@ export function Introduction() {
         <Badge variant="outline" colorScheme="primary" className="mb-4">
           v0.1.0 — early preview
         </Badge>
-        <h1 className="text-display text-text-primary">Nova UI</h1>
+        <h1 className="text-display text-text-primary">Pedro UI</h1>
         <p className="mt-3 max-w-xl text-body text-text-secondary">
           A production-grade, accessible React component library and design system for enterprise
           dashboards and B2B SaaS products.
@@ -55,17 +55,17 @@ export function Introduction() {
       </div>
 
       <Section title="Installation">
-        <CodeBlock language="bash" code={'npm install @nova-ui/react @nova-ui/theme'} />
+        <CodeBlock language="bash" code={'npm install @pedro-ui/react @pedro-ui/theme'} />
       </Section>
 
       <Section title="Quick start">
         <p className="mb-3 text-small text-text-secondary">
           Wrap your app in <code className="text-code">ThemeProvider</code>, import the token
-          stylesheet once, and Nova UI's components are ready to use.
+          stylesheet once, and Pedro UI's components are ready to use.
         </p>
         <CodeBlock
-          code={`import { ThemeProvider, Button } from '@nova-ui/react';
-import '@nova-ui/theme/variables.css';
+          code={`import { ThemeProvider, Button } from '@pedro-ui/react';
+import '@pedro-ui/theme/variables.css';
 
 export function App() {
   return (
@@ -79,18 +79,18 @@ export function App() {
 
       <Section title="Tailwind setup">
         <p className="mb-3 text-small text-text-secondary">
-          Nova UI's components are styled with Tailwind utility classes, so your app's Tailwind
+          Pedro UI's components are styled with Tailwind utility classes, so your app's Tailwind
           config needs to scan the package and extend the shared preset:
         </p>
         <CodeBlock
           code={`// tailwind.config.ts
-import novaPreset from '@nova-ui/theme/tailwind-preset';
+import pedroPreset from '@pedro-ui/theme/tailwind-preset';
 
 export default {
-  presets: [novaPreset],
+  presets: [pedroPreset],
   content: [
     './src/**/*.{ts,tsx}',
-    './node_modules/@nova-ui/react/**/*.{ts,tsx}',
+    './node_modules/@pedro-ui/react/**/*.{ts,tsx}',
   ],
 };`}
         />

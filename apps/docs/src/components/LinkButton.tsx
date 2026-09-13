@@ -1,15 +1,15 @@
 import { Link, type LinkProps } from 'react-router-dom';
-import { cn } from '@nova-ui/utils';
-import { buttonVariantStyles, type ButtonVariant } from '@nova-ui/react';
-import type { NovaColorScheme, NovaSize } from '@nova-ui/react';
+import { cn } from '@pedro-ui/utils';
+import { buttonVariantStyles, type ButtonVariant } from '@pedro-ui/react';
+import type { PedroColorScheme, PedroSize } from '@pedro-ui/react';
 
 export interface LinkButtonProps extends LinkProps {
   variant?: ButtonVariant;
-  colorScheme?: NovaColorScheme;
-  size?: NovaSize;
+  colorScheme?: PedroColorScheme;
+  size?: PedroSize;
 }
 
-const sizeStyles: Record<NovaSize, string> = {
+const sizeStyles: Record<PedroSize, string> = {
   sm: 'h-8 px-3 text-small gap-1.5 rounded-md',
   md: 'h-10 px-4 text-small gap-2 rounded-lg',
   lg: 'h-12 px-6 text-body gap-2 rounded-lg',
@@ -17,7 +17,7 @@ const sizeStyles: Record<NovaSize, string> = {
 
 /**
  * Docs-site-only helper: an in-app navigation link that's visually
- * identical to `Button`. Not part of the `@nova-ui/react` public API —
+ * identical to `Button`. Not part of the `@pedro-ui/react` public API —
  * Button intentionally stays a plain `<button>` (nesting `<Link>`'s `<a>`
  * inside it would be invalid, non-interactive-in-interactive HTML), so
  * apps that need a "looks like a button, navigates like a link" affordance

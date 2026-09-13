@@ -1,6 +1,6 @@
 import { forwardRef, type HTMLAttributes, type ReactNode } from 'react';
 import { CheckCircle2, AlertTriangle, XCircle, Info, X } from 'lucide-react';
-import { cn } from '@nova-ui/utils';
+import { cn } from '@pedro-ui/utils';
 import { IconButton } from '../IconButton';
 
 export type AlertStatus = 'success' | 'danger' | 'warning' | 'info';

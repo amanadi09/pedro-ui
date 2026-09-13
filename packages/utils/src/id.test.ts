@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { generateId } from './id';
 
 describe('generateId', () => {
-  it('defaults to the "nova" prefix', () => {
-    expect(generateId()).toMatch(/^nova-\d+$/);
+  it('defaults to the "pedro" prefix', () => {
+    expect(generateId()).toMatch(/^pedro-\d+$/);
   });
 
   it('accepts a custom prefix', () => {

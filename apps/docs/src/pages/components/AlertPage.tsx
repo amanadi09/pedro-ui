@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Alert } from '@nova-ui/react';
+import { Alert } from '@pedro-ui/react';
 import { PageHeader, Section } from '../../components/PageHeader';
 import { CodeBlock } from '../../components/CodeBlock';
 import { PropsTable, type PropRow } from '../../components/PropsTable';

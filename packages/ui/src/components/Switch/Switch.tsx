@@ -1,28 +1,28 @@
 import { forwardRef, useId, type InputHTMLAttributes } from 'react';
-import { cn } from '@nova-ui/utils';
-import type { NovaColorScheme, NovaSize } from '../../types';
+import { cn } from '@pedro-ui/utils';
+import type { PedroColorScheme, PedroSize } from '../../types';
 
 export interface SwitchProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'type'> {
   label?: string;
   /** Places the label before the switch instead of after. Default `false`. */
   labelPosition?: 'start' | 'end';
-  size?: NovaSize;
-  colorScheme?: NovaColorScheme;
+  size?: PedroSize;
+  colorScheme?: PedroColorScheme;
 }
 
-const trackSize: Record<NovaSize, string> = {
+const trackSize: Record<PedroSize, string> = {
   sm: 'h-5 w-9',
   md: 'h-6 w-11',
   lg: 'h-7 w-[3.25rem]',
 };
 
-const thumbSize: Record<NovaSize, string> = {
+const thumbSize: Record<PedroSize, string> = {
   sm: 'size-3.5 peer-checked:translate-x-4',
   md: 'size-4 peer-checked:translate-x-5',
   lg: 'size-5 peer-checked:translate-x-6',
 };
 
-const trackChecked: Record<NovaColorScheme, string> = {
+const trackChecked: Record<PedroColorScheme, string> = {
   primary: 'peer-checked:bg-primary-600 dark:peer-checked:bg-primary-500',
   secondary: 'peer-checked:bg-secondary-600 dark:peer-checked:bg-secondary-500',
   success: 'peer-checked:bg-success-600 dark:peer-checked:bg-success-500',
@@ -32,7 +32,7 @@ const trackChecked: Record<NovaColorScheme, string> = {
   neutral: 'peer-checked:bg-neutral-700 dark:peer-checked:bg-neutral-300',
 };
 
-const focusRing: Record<NovaColorScheme, string> = {
+const focusRing: Record<PedroColorScheme, string> = {
   primary: 'peer-focus-visible:ring-primary-500',
   secondary: 'peer-focus-visible:ring-secondary-500',
   success: 'peer-focus-visible:ring-success-500',

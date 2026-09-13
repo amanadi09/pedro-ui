@@ -1,6 +1,6 @@
 import { forwardRef, useId, type InputHTMLAttributes, type ReactNode } from 'react';
-import { cn } from '@nova-ui/utils';
-import type { NovaSize } from '../../types';
+import { cn } from '@pedro-ui/utils';
+import type { PedroSize } from '../../types';
 
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   label?: string;
@@ -9,19 +9,19 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 
   /** Presence of `errorText` implies `isInvalid` — you rarely need to pass both. */
   errorText?: string;
   isInvalid?: boolean;
-  size?: NovaSize;
+  size?: PedroSize;
   leftElement?: ReactNode;
   rightElement?: ReactNode;
   containerClassName?: string;
 }
 
-const sizeStyles: Record<NovaSize, string> = {
+const sizeStyles: Record<PedroSize, string> = {
   sm: 'h-8 text-small rounded-md',
   md: 'h-10 text-small rounded-lg',
   lg: 'h-12 text-body rounded-lg',
 };
 
-const paddingWithoutAdornment: Record<NovaSize, string> = { sm: 'px-2.5', md: 'px-3', lg: 'px-4' };
+const paddingWithoutAdornment: Record<PedroSize, string> = { sm: 'px-2.5', md: 'px-3', lg: 'px-4' };
 
 /**
  * A labeled text input with built-in helper/error messaging and optional

@@ -1,10 +1,10 @@
 /**
- * Nova UI color tokens.
+ * Pedro UI color tokens.
  *
  * Every semantic color family exposes a 50–900 ramp. These are the *source of
  * truth* values — `tailwind-preset.ts` re-exposes them as CSS custom
  * properties (see `../css/variables.css`) rather than static hex, so a
- * consuming product can re-theme Nova UI at runtime (e.g. white-labeling for
+ * consuming product can re-theme Pedro UI at runtime (e.g. white-labeling for
  * a customer) without forking or rebuilding the library.
  *
  * `neutral` doubles as the basis for the semantic surface/text/border tokens
@@ -26,13 +26,7 @@ export type ColorScale = {
 };
 
 export type ColorScheme =
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'danger'
-  | 'warning'
-  | 'info'
-  | 'neutral';
+  'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'neutral';
 
 /** Indigo — the brand accent. Chosen for the same reason Linear and Stripe
  *  lean violet/indigo: it reads as premium and technical without being cold,

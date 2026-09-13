@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MoreHorizontal } from 'lucide-react';
-import { Card, Button, IconButton } from '@nova-ui/react';
+import { Card, Button, IconButton } from '@pedro-ui/react';
 import { PageHeader, Section } from '../../components/PageHeader';
 import { CodeBlock } from '../../components/CodeBlock';
 import { PropsTable, type PropRow } from '../../components/PropsTable';

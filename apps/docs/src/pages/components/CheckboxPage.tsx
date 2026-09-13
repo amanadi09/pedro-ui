@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Checkbox } from '@nova-ui/react';
+import { Checkbox } from '@pedro-ui/react';
 import { PageHeader, Section } from '../../components/PageHeader';
 import { CodeBlock } from '../../components/CodeBlock';
 import { PropsTable, type PropRow } from '../../components/PropsTable';
@@ -20,7 +20,7 @@ const props: PropRow[] = [
   },
   {
     name: 'colorScheme',
-    type: 'NovaColorScheme',
+    type: 'PedroColorScheme',
     default: "'primary'",
     description: 'Fill color once checked.',
   },

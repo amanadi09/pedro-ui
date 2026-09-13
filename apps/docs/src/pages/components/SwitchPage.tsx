@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Switch } from '@nova-ui/react';
+import { Switch } from '@pedro-ui/react';
 import { PageHeader, Section } from '../../components/PageHeader';
 import { CodeBlock } from '../../components/CodeBlock';
 import { PropsTable, type PropRow } from '../../components/PropsTable';
@@ -27,7 +27,7 @@ const props: PropRow[] = [
   },
   {
     name: 'colorScheme',
-    type: 'NovaColorScheme',
+    type: 'PedroColorScheme',
     default: "'primary'",
     description: 'Track color when checked.',
   },

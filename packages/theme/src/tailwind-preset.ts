@@ -26,17 +26,17 @@ function colorRamp(name: string) {
 }
 
 /**
- * Shared Tailwind preset. Any app or package that renders Nova UI components
+ * Shared Tailwind preset. Any app or package that renders Pedro UI components
  * should extend this in its own tailwind.config so the JIT scanner picks up
  * class names used inside `packages/ui` even when that app doesn't author
  * them directly:
  *
  * ```ts
- * import novaPreset from '@nova-ui/theme/tailwind-preset';
- * export default { presets: [novaPreset], content: [...] };
+ * import pedroPreset from '@pedro-ui/theme/tailwind-preset';
+ * export default { presets: [pedroPreset], content: [...] };
  * ```
  */
-const novaPreset: Partial<Config> = {
+const pedroPreset: Partial<Config> = {
   darkMode: 'class',
   theme: {
     extend: {
@@ -131,26 +131,26 @@ const novaPreset: Partial<Config> = {
         '2xl': 'var(--shadow-2xl)',
       },
       keyframes: {
-        'nova-fade-in': { from: { opacity: '0' }, to: { opacity: '1' } },
-        'nova-fade-out': { from: { opacity: '1' }, to: { opacity: '0' } },
-        'nova-scale-in': {
+        'pedro-fade-in': { from: { opacity: '0' }, to: { opacity: '1' } },
+        'pedro-fade-out': { from: { opacity: '1' }, to: { opacity: '0' } },
+        'pedro-scale-in': {
           from: { opacity: '0', transform: 'scale(0.96)' },
           to: { opacity: '1', transform: 'scale(1)' },
         },
-        'nova-slide-up': {
+        'pedro-slide-up': {
           from: { opacity: '0', transform: 'translateY(4px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
       },
       animation: {
-        'nova-fade-in': 'nova-fade-in 150ms ease-out',
-        'nova-fade-out': 'nova-fade-out 120ms ease-in',
-        'nova-scale-in': 'nova-scale-in 150ms cubic-bezier(0.16, 1, 0.3, 1)',
-        'nova-slide-up': 'nova-slide-up 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'pedro-fade-in': 'pedro-fade-in 150ms ease-out',
+        'pedro-fade-out': 'pedro-fade-out 120ms ease-in',
+        'pedro-scale-in': 'pedro-scale-in 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'pedro-slide-up': 'pedro-slide-up 200ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },
   plugins: [tailwindcssAnimate],
 };
 
-export default novaPreset;
+export default pedroPreset;

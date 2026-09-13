@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react';
-import { useClipboard } from '@nova-ui/hooks';
-import { cn } from '@nova-ui/utils';
-import { IconButton } from '@nova-ui/react';
+import { useClipboard } from '@pedro-ui/hooks';
+import { cn } from '@pedro-ui/utils';
+import { IconButton } from '@pedro-ui/react';
 
 export function CodeBlock({ code, language = 'tsx' }: { code: string; language?: string }) {
   const { copy, copied } = useClipboard();

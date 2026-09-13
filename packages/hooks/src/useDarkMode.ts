@@ -18,7 +18,7 @@ export type UseDarkModeResult = {
  * Manages light/dark/system color mode: persists the preference to
  * `localStorage`, resolves `'system'` against `prefers-color-scheme` live,
  * and applies/removes the `.dark` class on `<html>` as a side effect so
- * Tailwind's `dark:` variant and Nova UI's CSS-variable tokens pick it up
+ * Tailwind's `dark:` variant and Pedro UI's CSS-variable tokens pick it up
  * everywhere, not just inside React-rendered trees.
  *
  * `ThemeProvider` calls this internally — use this hook directly only if
@@ -31,7 +31,7 @@ export type UseDarkModeResult = {
  *   {resolvedMode === 'dark' ? <Sun /> : <Moon />}
  * </IconButton>
  */
-export function useDarkMode(storageKey = 'nova-ui-color-mode'): UseDarkModeResult {
+export function useDarkMode(storageKey = 'pedro-ui-color-mode'): UseDarkModeResult {
   const [mode, setMode] = useLocalStorage<ColorMode>(storageKey, 'system');
   const systemPrefersDark = useMediaQuery('(prefers-color-scheme: dark)');
 

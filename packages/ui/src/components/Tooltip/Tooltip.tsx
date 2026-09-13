@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { cn } from '@nova-ui/utils';
+import { cn } from '@pedro-ui/utils';
 
 export type TooltipPlacement = 'top' | 'bottom' | 'left' | 'right';
 
@@ -42,7 +42,7 @@ const motionOrigin: Record<TooltipPlacement, { x?: number; y?: number }> = {
  * common case of a tooltip near the center of the screen. For a trigger
  * that can sit at a viewport edge (e.g. inside a scrolling data grid),
  * pair this pattern with a floating-ui-based positioner instead; that's
- * intentionally not a Nova UI dependency yet, see ROADMAP.
+ * intentionally not a Pedro UI dependency yet, see ROADMAP.
  *
  * a11y: shows on both `mouseenter`/`mouseleave` *and* `focus`/`blur`, so
  * keyboard users see it too, not just mouse users. The trigger gets

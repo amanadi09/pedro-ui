@@ -1,4 +1,4 @@
-import { Avatar } from '@nova-ui/react';
+import { Avatar } from '@pedro-ui/react';
 import { PageHeader, Section } from '../../components/PageHeader';
 import { CodeBlock } from '../../components/CodeBlock';
 import { PropsTable, type PropRow } from '../../components/PropsTable';
@@ -24,7 +24,7 @@ const props: PropRow[] = [
   },
   {
     name: 'colorScheme',
-    type: 'NovaColorScheme',
+    type: 'PedroColorScheme',
     default: "'neutral'",
     description: 'Fallback-initials background. Ignored once an image loads.',
   },

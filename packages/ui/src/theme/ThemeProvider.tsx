@@ -1,7 +1,7 @@
 import { createContext, useContext, useMemo, useState, type ReactNode } from 'react';
-import { useDarkMode, type ColorMode } from '@nova-ui/hooks';
+import { useDarkMode, type ColorMode } from '@pedro-ui/hooks';
 
-export type NovaThemeContextValue = {
+export type PedroThemeContextValue = {
   mode: ColorMode;
   resolvedMode: 'light' | 'dark';
   setMode: (mode: ColorMode) => void;
@@ -10,23 +10,23 @@ export type NovaThemeContextValue = {
   setHighContrast: (value: boolean) => void;
 };
 
-const NovaThemeContext = createContext<NovaThemeContextValue | null>(null);
+const PedroThemeContext = createContext<PedroThemeContextValue | null>(null);
 
 export type ThemeProviderProps = {
   children: ReactNode;
   /** Initial color mode preference. Default `'system'`. Persisted after the first change. */
   defaultMode?: ColorMode;
-  /** Storage key used to persist the mode preference. Default `'nova-ui-color-mode'`. */
+  /** Storage key used to persist the mode preference. Default `'pedro-ui-color-mode'`. */
   storageKey?: string;
 };
 
 /**
- * Root provider for Nova UI. Mount once near the top of your app (see
+ * Root provider for Pedro UI. Mount once near the top of your app (see
  * apps/docs/src/main.tsx). Manages color mode (via `useDarkMode` under the
  * hood — see that hook for the `.dark` class / CSS variable mechanics) and
  * an optional high-contrast mode, and exposes both through `useTheme()`.
  *
- * Nova UI components render correctly without this provider too — it's a
+ * Pedro UI components render correctly without this provider too — it's a
  * convenience layer for app-level theme *controls* (toggles, settings
  * pages), not a requirement for styling to apply, since the actual
  * light/dark values are plain CSS variables scoped to `:root`/`.dark`.
@@ -39,7 +39,7 @@ export type ThemeProviderProps = {
 export function ThemeProvider({
   children,
   defaultMode = 'system',
-  storageKey = 'nova-ui-color-mode',
+  storageKey = 'pedro-ui-color-mode',
 }: ThemeProviderProps) {
   const { mode, resolvedMode, setMode, toggle } = useDarkMode(storageKey);
   const [highContrast, setHighContrastState] = useState(false);
@@ -58,12 +58,12 @@ export function ThemeProvider({
     document.documentElement.classList.toggle('hc', value);
   };
 
-  const value = useMemo<NovaThemeContextValue>(
+  const value = useMemo<PedroThemeContextValue>(
     () => ({ mode, resolvedMode, setMode, toggleMode: toggle, highContrast, setHighContrast }),
     [mode, resolvedMode, setMode, toggle, highContrast],
   );
 
-  return <NovaThemeContext.Provider value={value}>{children}</NovaThemeContext.Provider>;
+  return <PedroThemeContext.Provider value={value}>{children}</PedroThemeContext.Provider>;
 }
 
 /**
@@ -75,8 +75,8 @@ export function ThemeProvider({
  * @example
  * const { resolvedMode, toggleMode } = useTheme();
  */
-export function useTheme(): NovaThemeContextValue {
-  const ctx = useContext(NovaThemeContext);
+export function useTheme(): PedroThemeContextValue {
+  const ctx = useContext(PedroThemeContext);
   if (!ctx) {
     throw new Error(
       'useTheme() was called outside of a <ThemeProvider>. Wrap your app in <ThemeProvider>.',

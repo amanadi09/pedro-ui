@@ -1,28 +1,28 @@
 import { forwardRef, useId, type InputHTMLAttributes } from 'react';
 import { Check, Minus } from 'lucide-react';
-import { cn } from '@nova-ui/utils';
-import type { NovaColorScheme, NovaSize } from '../../types';
+import { cn } from '@pedro-ui/utils';
+import type { PedroColorScheme, PedroSize } from '../../types';
 
 export interface CheckboxProps extends Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'size' | 'type'
 > {
   label?: string;
-  size?: NovaSize;
-  colorScheme?: NovaColorScheme;
+  size?: PedroSize;
+  colorScheme?: PedroColorScheme;
   /** Renders a dash instead of a check — for a parent checkbox whose children are partially selected. Purely visual; doesn't affect `checked`/form value. */
   isIndeterminate?: boolean;
 }
 
-const boxSize: Record<NovaSize, string> = { sm: 'size-4', md: 'size-5', lg: 'size-6' };
-const iconSize: Record<NovaSize, string> = { sm: 'size-3', md: 'size-3.5', lg: 'size-4' };
-const labelTextSize: Record<NovaSize, string> = {
+const boxSize: Record<PedroSize, string> = { sm: 'size-4', md: 'size-5', lg: 'size-6' };
+const iconSize: Record<PedroSize, string> = { sm: 'size-3', md: 'size-3.5', lg: 'size-4' };
+const labelTextSize: Record<PedroSize, string> = {
   sm: 'text-small',
   md: 'text-small',
   lg: 'text-body',
 };
 
-const checkedBg: Record<NovaColorScheme, string> = {
+const checkedBg: Record<PedroColorScheme, string> = {
   primary:
     'peer-checked:border-primary-600 peer-checked:bg-primary-600 dark:peer-checked:border-primary-500 dark:peer-checked:bg-primary-500',
   secondary:
@@ -39,7 +39,7 @@ const checkedBg: Record<NovaColorScheme, string> = {
 
 // Same palette as checkedBg, unconditional (no peer-checked: prefix) — used
 // for the isIndeterminate visual override, see the render below.
-const checkedBgSolid: Record<NovaColorScheme, string> = {
+const checkedBgSolid: Record<PedroColorScheme, string> = {
   primary: 'border-primary-600 bg-primary-600 dark:border-primary-500 dark:bg-primary-500',
   secondary:
     'border-secondary-600 bg-secondary-600 dark:border-secondary-500 dark:bg-secondary-500',
@@ -50,7 +50,7 @@ const checkedBgSolid: Record<NovaColorScheme, string> = {
   neutral: 'border-neutral-700 bg-neutral-700 dark:border-neutral-300 dark:bg-neutral-300',
 };
 
-const focusRing: Record<NovaColorScheme, string> = {
+const focusRing: Record<PedroColorScheme, string> = {
   primary: 'peer-focus-visible:ring-primary-500',
   secondary: 'peer-focus-visible:ring-secondary-500',
   success: 'peer-focus-visible:ring-success-500',

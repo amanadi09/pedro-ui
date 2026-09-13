@@ -2,7 +2,7 @@ import type { Preview, Decorator } from '@storybook/react';
 import React, { useEffect } from 'react';
 import './preview.css';
 
-/** Applies the toolbar's light/dark selection to <html> so Nova UI's CSS
+/** Applies the toolbar's light/dark selection to <html> so Pedro UI's CSS
  * variable tokens (which key off `.dark`, not a prop) respond correctly.
  * Split out as its own component (not inlined in the decorator below) so
  * the `useEffect` call satisfies react-hooks/rules-of-hooks, which keys

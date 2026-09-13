@@ -1,5 +1,5 @@
 import { forwardRef, type HTMLAttributes } from 'react';
-import { cn } from '@nova-ui/utils';
+import { cn } from '@pedro-ui/utils';
 
 export type CardVariant = 'elevated' | 'outlined' | 'flat';
 

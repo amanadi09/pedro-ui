@@ -1,7 +1,7 @@
 {
-  "name": "@nova-ui/hooks",
+  "name": "@pedro-ui/hooks",
   "version": "0.1.0",
-  "description": "Reusable React hooks used across Nova UI and available standalone.",
+  "description": "Reusable React hooks used across Pedro UI and available standalone.",
   "license": "MIT",
   "type": "module",
   "main": "./src/index.ts",
@@ -18,7 +18,7 @@
     "react": "^18.0.0 || ^19.0.0"
   },
   "dependencies": {
-    "@nova-ui/utils": "*"
+    "@pedro-ui/utils": "*"
   },
   "scripts": {
     "build": "vite build",

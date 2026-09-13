@@ -1,5 +1,5 @@
 import { CheckCircle2 } from 'lucide-react';
-import { Alert } from '@nova-ui/react';
+import { Alert } from '@pedro-ui/react';
 import { PageHeader, Section } from '../components/PageHeader';
 
 const commitments = [
@@ -34,7 +34,7 @@ export function Accessibility() {
     <div>
       <PageHeader
         title="Accessibility"
-        description="What Nova UI does today, stated plainly rather than as a blanket compliance claim."
+        description="What Pedro UI does today, stated plainly rather than as a blanket compliance claim."
       />
 
       <Alert status="info" title="Where this stands" className="mb-8">

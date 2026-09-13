@@ -1,7 +1,7 @@
 {
-  "name": "@nova-ui/theme",
+  "name": "@pedro-ui/theme",
   "version": "0.1.0",
-  "description": "Design tokens (color, type, spacing, radius, shadow) and Tailwind preset for Nova UI.",
+  "description": "Design tokens (color, type, spacing, radius, shadow) and Tailwind preset for Pedro UI.",
   "license": "MIT",
   "type": "module",
   "sideEffects": [

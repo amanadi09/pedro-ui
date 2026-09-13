@@ -13,7 +13,7 @@ let counter = 0;
  * generateId('input') // "input-1"
  * generateId('input') // "input-2"
  */
-export function generateId(prefix = 'nova'): string {
+export function generateId(prefix = 'pedro'): string {
   counter += 1;
   return `${prefix}-${counter}`;
 }

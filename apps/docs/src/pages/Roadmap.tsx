@@ -12,8 +12,8 @@ const phase1: Item[] = [
     label: 'Design token system (color/type/space/radius/shadow) + Tailwind preset',
     status: 'done',
   },
-  { label: '@nova-ui/utils — 10 functions, fully tested', status: 'done' },
-  { label: '@nova-ui/hooks — 14 hooks, fully tested', status: 'done' },
+  { label: '@pedro-ui/utils — 10 functions, fully tested', status: 'done' },
+  { label: '@pedro-ui/hooks — 14 hooks, fully tested', status: 'done' },
   {
     label:
       '10 flagship components (Button, IconButton, Badge, Avatar, Card, Alert, Input, Checkbox, Switch, Tooltip)',

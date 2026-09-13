@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { cn } from '@nova-ui/utils';
+import { cn } from '@pedro-ui/utils';
 import { navSections } from '../lib';
 
 export function Sidebar({ className }: { className?: string }) {

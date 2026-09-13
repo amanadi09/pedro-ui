@@ -1,4 +1,4 @@
-import { useTheme } from '@nova-ui/react';
+import { useTheme } from '@pedro-ui/react';
 import { PageHeader, Section } from '../components/PageHeader';
 import { CodeBlock } from '../components/CodeBlock';
 
@@ -16,7 +16,7 @@ export function Theming() {
     <div>
       <PageHeader
         title="Theming"
-        description="Nova UI's tokens are CSS custom properties, not hard-coded Tailwind values — light, dark, and high-contrast are all runtime states, not separate builds."
+        description="Pedro UI's tokens are CSS custom properties, not hard-coded Tailwind values — light, dark, and high-contrast are all runtime states, not separate builds."
       />
 
       <Section title="Try it">
@@ -96,7 +96,7 @@ export function Theming() {
       <Section title="Custom branding">
         <p className="mb-3 text-small text-text-secondary">
           Because every token is a CSS variable, a product team can override just the accent color
-          without forking Nova UI or waiting on a new release:
+          without forking Pedro UI or waiting on a new release:
         </p>
         <CodeBlock
           code={`/* your-app/brand-override.css */

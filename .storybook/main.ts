@@ -17,15 +17,15 @@ const config: StorybookConfig = {
       resolve: {
         alias: [
           {
-            find: '@nova-ui/hooks',
+            find: '@pedro-ui/hooks',
             replacement: resolve(__dirname, '../packages/hooks/src/index.ts'),
           },
           {
-            find: '@nova-ui/utils',
+            find: '@pedro-ui/utils',
             replacement: resolve(__dirname, '../packages/utils/src/index.ts'),
           },
           {
-            find: '@nova-ui/theme',
+            find: '@pedro-ui/theme',
             replacement: resolve(__dirname, '../packages/theme/src/index.ts'),
           },
         ],

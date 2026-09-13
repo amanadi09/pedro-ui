@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Copy } from 'lucide-react';
-import { Tooltip, IconButton } from '@nova-ui/react';
+import { Tooltip, IconButton } from '@pedro-ui/react';
 import { PageHeader, Section } from '../../components/PageHeader';
 import { CodeBlock } from '../../components/CodeBlock';
 import { PropsTable, type PropRow } from '../../components/PropsTable';
@@ -90,7 +90,7 @@ export function TooltipPage() {
           <li>
             For a trigger that can sit near a viewport edge (inside a scrolling data grid, for
             instance), this CSS-positioned approach can clip or overflow — that's the one case worth
-            reaching for a floating-ui-based positioner instead, intentionally not a Nova UI
+            reaching for a floating-ui-based positioner instead, intentionally not a Pedro UI
             dependency yet.
           </li>
         </ul>

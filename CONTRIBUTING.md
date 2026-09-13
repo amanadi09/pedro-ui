@@ -1,4 +1,4 @@
-# Contributing to Nova UI
+# Contributing to Pedro UI
 
 ## Local setup
 
@@ -49,7 +49,7 @@ gates plus a build.
 
 ## What counts as a breaking change
 
-Nova UI is pre-1.0, so semver is best-effort, but treat these as breaking regardless of current
+Pedro UI is pre-1.0, so semver is best-effort, but treat these as breaking regardless of current
 version:
 
 - Removing or renaming an exported component, hook, or util

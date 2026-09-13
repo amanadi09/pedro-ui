@@ -1,6 +1,6 @@
 import { Github, Moon, Sun, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useTheme, IconButton, Badge } from '@nova-ui/react';
+import { useTheme, IconButton, Badge } from '@pedro-ui/react';
 
 export function Header({ onMenuClick }: { onMenuClick?: () => void }) {
   const { resolvedMode, toggleMode } = useTheme();
@@ -19,9 +19,9 @@ export function Header({ onMenuClick }: { onMenuClick?: () => void }) {
         />
         <Link to="/" className="flex items-center gap-2">
           <span className="flex size-7 items-center justify-center rounded-lg bg-primary-600 text-small font-bold text-white dark:bg-primary-500 dark:text-neutral-950">
-            N
+            P
           </span>
-          <span className="text-title text-text-primary">Nova UI</span>
+          <span className="text-title text-text-primary">Pedro UI</span>
           <Badge size="sm" variant="outline" colorScheme="neutral">
             v0.1.0
           </Badge>

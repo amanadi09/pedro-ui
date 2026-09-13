@@ -1,4 +1,4 @@
-# Nova UI
+# Pedro UI
 
 A production-grade React design system and component library, built the way a frontend
 infrastructure team would build one for internal product teams to consume.
@@ -32,7 +32,7 @@ infrastructure team would build one for internal product teams to consume.
 
 ## Why this exists
 
-Nova UI is meant to demonstrate the engineering that sits *around* good components — architecture,
+Pedro UI is meant to demonstrate the engineering that sits *around* good components — architecture,
 token systems, testing discipline, and documentation — not just the components themselves. Every
 decision below is made and explained, not left implicit.
 
@@ -54,7 +54,7 @@ decision below is made and explained, not left implicit.
 
 > **Known issue:** `npm audit` currently reports vulnerabilities in transitive **dev-tooling**
 > dependencies only (esbuild's dev-server request handling via Vite 5, and `uuid` via a Storybook
-> addon's transitive dependency) — nothing in the shipped runtime code of any `@nova-ui/*` package.
+> addon's transitive dependency) — nothing in the shipped runtime code of any `@pedro-ui/*` package.
 > `npm audit fix --force` resolves them by force-upgrading to Vite 8 and downgrading a Storybook
 > addon to an incompatible version respectively; both are untested breaking changes, so they're
 > intentionally left as-is rather than applied blindly right before a release. Worth revisiting
@@ -67,18 +67,18 @@ implies genuinely separable concerns:
 
 ```
 packages/theme  →  packages/utils  ↘
-                                     packages/ui (@nova-ui/react)  →  apps/docs
+                                     packages/ui (@pedro-ui/react)  →  apps/docs
                     packages/hooks  ↗
 ```
 
-- **`@nova-ui/theme`** — design tokens as CSS custom properties (not static Tailwind values), plus
+- **`@pedro-ui/theme`** — design tokens as CSS custom properties (not static Tailwind values), plus
   a Tailwind preset that bridges them into utility classes. This is the one piece every other
   package depends on.
-- **`@nova-ui/utils`** and **`@nova-ui/hooks`** — framework-light and React-only utilities,
+- **`@pedro-ui/utils`** and **`@pedro-ui/hooks`** — framework-light and React-only utilities,
   respectively, split into two packages (not one) so a non-React consumer could theoretically use
   `utils` alone, and so tree-shaking per-package is meaningful.
-- **`@nova-ui/react`** — the component library. Depends on all three packages above.
-- **`apps/docs`** — consumes `@nova-ui/react` the same way an external product team would.
+- **`@pedro-ui/react`** — the component library. Depends on all three packages above.
+- **`apps/docs`** — consumes `@pedro-ui/react` the same way an external product team would.
 
 **Deliberate deviations from a literal reading of the original spec**, and why:
 
@@ -100,7 +100,7 @@ packages/theme  →  packages/utils  ↘
   that only shows up in production (dev mode can behave differently), so it was worth getting
   right rather than optimizing the source for brevity.
 - **Package source is consumed directly in dev, not built to `dist/` first.** `apps/docs`'s Vite
-  config aliases `@nova-ui/*` straight to each package's `src/index.ts`, so editing a component
+  config aliases `@pedro-ui/*` straight to each package's `src/index.ts`, so editing a component
   hot-reloads the docs site without an intermediate build step. Each package still has a working
   `vite build` (library mode, ESM+CJS, sourcemaps) for the case that actually matters — publishing
   to npm — configured in its `vite.config.ts`.
@@ -108,14 +108,14 @@ packages/theme  →  packages/utils  ↘
 ## Folder structure
 
 ```
-nova-ui/
+pedro-ui/
 ├── apps/
 │   └── docs/                 # Documentation site (Vite + React Router)
 ├── packages/
 │   ├── theme/                 # Design tokens + Tailwind preset
 │   ├── utils/                 # cn, format*, debounce/throttle, clipboard, CSV export
 │   ├── hooks/                 # 14 React hooks
-│   └── ui/                    # @nova-ui/react — the component library
+│   └── ui/                    # @pedro-ui/react — the component library
 │       └── src/components/<Component>/
 │           ├── <Component>.tsx
 │           ├── <Component>.stories.tsx
@@ -134,33 +134,33 @@ Requires Node ≥ 18.18 and npm ≥ 10 (see `package.json#engines` / `.nvmrc`).
 
 ```bash
 git clone <this-repo>
-cd nova-ui
+cd pedro-ui
 npm install
 npm run dev          # docs site at http://localhost:5173
 npm run storybook     # Storybook at http://localhost:6006
 npm test               # full workspace test suite
 ```
 
-To use Nova UI **in another project** once it's published:
+To use Pedro UI **in another project** once it's published:
 
 ```bash
-npm install @nova-ui/react @nova-ui/theme
+npm install @pedro-ui/react @pedro-ui/theme
 ```
 
 ```tsx
 // tailwind.config.ts
-import novaPreset from '@nova-ui/theme/tailwind-preset';
+import pedroPreset from '@pedro-ui/theme/tailwind-preset';
 
 export default {
-  presets: [novaPreset],
-  content: ['./src/**/*.{ts,tsx}', './node_modules/@nova-ui/react/**/*.{ts,tsx}'],
+  presets: [pedroPreset],
+  content: ['./src/**/*.{ts,tsx}', './node_modules/@pedro-ui/react/**/*.{ts,tsx}'],
 };
 ```
 
 ```tsx
 // main.tsx
-import { ThemeProvider } from '@nova-ui/react';
-import '@nova-ui/theme/variables.css';
+import { ThemeProvider } from '@pedro-ui/react';
+import '@pedro-ui/theme/variables.css';
 
 createRoot(document.getElementById('root')!).render(
   <ThemeProvider defaultMode="system">
@@ -172,7 +172,7 @@ createRoot(document.getElementById('root')!).render(
 ## Usage
 
 ```tsx
-import { Button, Input, Card, Alert } from '@nova-ui/react';
+import { Button, Input, Card, Alert } from '@pedro-ui/react';
 import { Mail } from 'lucide-react';
 
 function SignupForm() {

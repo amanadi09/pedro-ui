@@ -1,8 +1,8 @@
 {
-  "name": "@nova-ui/docs",
+  "name": "@pedro-ui/docs",
   "private": true,
   "version": "0.1.0",
-  "description": "Nova UI documentation site.",
+  "description": "Pedro UI documentation site.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,10 +11,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@nova-ui/hooks": "*",
-    "@nova-ui/react": "*",
-    "@nova-ui/theme": "*",
-    "@nova-ui/utils": "*",
+    "@pedro-ui/hooks": "*",
+    "@pedro-ui/react": "*",
+    "@pedro-ui/theme": "*",
+    "@pedro-ui/utils": "*",
     "lucide-react": "^0.460.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -1,6 +1,6 @@
 import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from 'react';
-import { cn } from '@nova-ui/utils';
-import type { NovaColorScheme, NovaSize } from '../../types';
+import { cn } from '@pedro-ui/utils';
+import type { PedroColorScheme, PedroSize } from '../../types';
 
 export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'link';
 
@@ -8,9 +8,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /** Visual treatment. Default `'solid'`. */
   variant?: ButtonVariant;
   /** Semantic color. Default `'primary'`. */
-  colorScheme?: NovaColorScheme;
+  colorScheme?: PedroColorScheme;
   /** Default `'md'`. */
-  size?: NovaSize;
+  size?: PedroSize;
   /** Shows a spinner in place of the icon slot and disables the button, without shifting its width. */
   isLoading?: boolean;
   /** Text announced to screen readers while `isLoading` — visible label stays put so sighted users don't lose context. Default `'Loading'`. */
@@ -20,13 +20,13 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
 }
 
-const sizeStyles: Record<NovaSize, string> = {
+const sizeStyles: Record<PedroSize, string> = {
   sm: 'h-8 px-3 text-small gap-1.5 rounded-md',
   md: 'h-10 px-4 text-small gap-2 rounded-lg',
   lg: 'h-12 px-6 text-body gap-2 rounded-lg',
 };
 
-const iconSizeStyles: Record<NovaSize, string> = {
+const iconSizeStyles: Record<PedroSize, string> = {
   sm: '[&_svg]:size-4',
   md: '[&_svg]:size-4',
   lg: '[&_svg]:size-5',
@@ -36,7 +36,7 @@ const iconSizeStyles: Record<NovaSize, string> = {
 // packages/ui README section "Why no dynamic class construction" for why
 // this isn't `bg-${colorScheme}-600` (Tailwind can't statically extract
 // interpolated class names, so those utilities never ship in the built CSS).
-const solidStyles: Record<NovaColorScheme, string> = {
+const solidStyles: Record<PedroColorScheme, string> = {
   primary:
     'bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 dark:bg-primary-500 dark:text-neutral-950 dark:hover:bg-primary-400 dark:active:bg-primary-300 focus-visible:ring-primary-500',
   secondary:
@@ -52,7 +52,7 @@ const solidStyles: Record<NovaColorScheme, string> = {
     'bg-neutral-800 text-white hover:bg-neutral-900 active:bg-neutral-950 dark:bg-neutral-200 dark:text-neutral-900 dark:hover:bg-neutral-100 focus-visible:ring-neutral-400',
 };
 
-const outlineStyles: Record<NovaColorScheme, string> = {
+const outlineStyles: Record<PedroColorScheme, string> = {
   primary:
     'border border-primary-300 text-primary-700 hover:bg-primary-50 active:bg-primary-100 dark:border-primary-700 dark:text-primary-300 dark:hover:bg-primary-950/40 focus-visible:ring-primary-500',
   secondary:
@@ -68,7 +68,7 @@ const outlineStyles: Record<NovaColorScheme, string> = {
     'border border-border-strong text-text-primary hover:bg-surface-hover focus-visible:ring-neutral-400',
 };
 
-const ghostStyles: Record<NovaColorScheme, string> = {
+const ghostStyles: Record<PedroColorScheme, string> = {
   primary:
     'text-primary-700 hover:bg-primary-50 dark:text-primary-300 dark:hover:bg-primary-950/40 focus-visible:ring-primary-500',
   secondary:
@@ -83,7 +83,7 @@ const ghostStyles: Record<NovaColorScheme, string> = {
   neutral: 'text-text-primary hover:bg-surface-hover focus-visible:ring-neutral-400',
 };
 
-const linkStyles: Record<NovaColorScheme, string> = {
+const linkStyles: Record<PedroColorScheme, string> = {
   primary:
     'text-primary-600 underline-offset-4 hover:underline dark:text-primary-400 focus-visible:ring-primary-500',
   secondary:
@@ -98,7 +98,7 @@ const linkStyles: Record<NovaColorScheme, string> = {
   neutral: 'text-text-primary underline-offset-4 hover:underline focus-visible:ring-neutral-400',
 };
 
-export const buttonVariantStyles: Record<ButtonVariant, Record<NovaColorScheme, string>> = {
+export const buttonVariantStyles: Record<ButtonVariant, Record<PedroColorScheme, string>> = {
   solid: solidStyles,
   outline: outlineStyles,
   ghost: ghostStyles,

@@ -1,7 +1,7 @@
 {
-  "name": "@nova-ui/react",
+  "name": "@pedro-ui/react",
   "version": "0.1.0",
-  "description": "Nova UI — a production-grade React component library.",
+  "description": "Pedro UI — a production-grade React component library.",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -20,9 +20,9 @@
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "dependencies": {
-    "@nova-ui/hooks": "*",
-    "@nova-ui/theme": "*",
-    "@nova-ui/utils": "*",
+    "@pedro-ui/hooks": "*",
+    "@pedro-ui/theme": "*",
+    "@pedro-ui/utils": "*",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.460.0"
   },

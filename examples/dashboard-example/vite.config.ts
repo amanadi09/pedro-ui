@@ -6,17 +6,20 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: [
-      { find: '@nova-ui/react', replacement: resolve(__dirname, '../../packages/ui/src/index.ts') },
       {
-        find: '@nova-ui/hooks',
+        find: '@pedro-ui/react',
+        replacement: resolve(__dirname, '../../packages/ui/src/index.ts'),
+      },
+      {
+        find: '@pedro-ui/hooks',
         replacement: resolve(__dirname, '../../packages/hooks/src/index.ts'),
       },
       {
-        find: '@nova-ui/utils',
+        find: '@pedro-ui/utils',
         replacement: resolve(__dirname, '../../packages/utils/src/index.ts'),
       },
       {
-        find: '@nova-ui/theme',
+        find: '@pedro-ui/theme',
         replacement: resolve(__dirname, '../../packages/theme/src/index.ts'),
       },
     ],
