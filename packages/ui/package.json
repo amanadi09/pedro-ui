@@ -23,8 +23,8 @@
     "@pedro-ui/hooks": "*",
     "@pedro-ui/theme": "*",
     "@pedro-ui/utils": "*",
-    "framer-motion": "^11.11.17",
-    "lucide-react": "^0.460.0"
+    "framer-motion": "^14.5.0",
+    "lucide-react": "^1.60.0"
   },
   "scripts": {
     "build": "vite build",
@@ -35,8 +35,8 @@
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^4.3.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.11",
     "vitest": "^2.1.5"
